@@ -25,7 +25,9 @@ SECRET_KEY = 'django-insecure-7hg=55bxg-$zli#lc3)c29ax3-%b+4#b2!)4jufe281e40^$58
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['azamuzapbar.pythonanywhere.com']
+ALLOWED_HOSTS = ['azamuzapbar.pythonanywhere.com',
+                 'localhost'
+                 ]
 
 REST_FRAMEWORK = {
     # YOUR SETTINGS
