@@ -1,7 +1,7 @@
 from django.urls import path
-
-from api.restaurant.views import RestaurantAPIList
+from .views import RestaurantViewSet
 
 urlpatterns = [
-    path('api/restaurantlist', RestaurantAPIList.as_view()),
+    path("restaurant-list/", RestaurantViewSet.as_view({"get": "list"}), name="restaurant_list"),
+    path("restaurant-create/", RestaurantViewSet.as_view({"post": "create"}), name="restaurant_create"),
 ]

@@ -22,12 +22,9 @@ from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('api.urls')),
+    path('', include('api.restaurant.urls')),
     path("schema/", SpectacularAPIView.as_view(), name="schema"),
-    path(
-        "docs/",
-        SpectacularSwaggerView.as_view(
-            template_name="swagger-ui.html", url_name="schema"
-        ),
+    path("docs/",SpectacularSwaggerView.as_view(template_name="swagger-ui.html", url_name="schema"),
         name="swagger-ui",
     ),
     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
