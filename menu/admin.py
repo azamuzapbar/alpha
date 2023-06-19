@@ -1,8 +1,10 @@
 from django.contrib import admin
 
-# Register your models here.
-from menu.models import Menu
+from menu.models.menu import Menu
+from menu.models.food_items import Food_item
+
+
 
 # Register your models here.
-
+admin.site.register(Food_item)
 admin.site.register(Menu)
